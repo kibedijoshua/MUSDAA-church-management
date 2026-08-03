@@ -104,53 +104,53 @@ Project Structure
 text
 
 musdaa-backend/
-├── accounts/           # User authentication
-│   ├── models.py       # Custom User model
-│   ├── serializers.py  # User serializers
-│   ├── views.py        # Auth views (register, login, profile)
-│   └── urls.py         # Auth URLs
-├── members/            # Member management
-│   ├── models.py       # MemberProfile model
-│   ├── serializers.py  # Member serializers
-│   ├── views.py        # Member views
-│   └── urls.py         # Member URLs
-├── attendance/         # Attendance tracking
-│   ├── models.py       # ServiceType, Service, Attendance
-│   ├── serializers.py  # Attendance serializers
-│   ├── views.py        # Check-in, stats, reports
-│   └── urls.py         # Attendance URLs
-├── events/             # Event management
-│   ├── models.py       # Event, EventRSVP
-│   ├── serializers.py  # Event serializers
-│   ├── views.py        # Event CRUD, RSVP
-│   └── urls.py         # Event URLs
-├── prayers/            # Prayer wall
-│   ├── models.py       # PrayerRequest, PrayerRecord
-│   ├── serializers.py  # Prayer serializers
-│   ├── views.py        # Submit, pray, list prayers
-│   └── urls.py         # Prayer URLs
-├── sermons/            # Sermon library
-│   ├── models.py       # SermonSeries, Sermon
-│   ├── serializers.py  # Sermon serializers
-│   ├── views.py        # Upload, list, listen
-│   └── urls.py         # Sermon URLs
-├── contributions/      # Contributions management
-│   ├── models.py       # ContributionType, Contribution
-│   ├── serializers.py  # Contribution serializers
-│   ├── views.py        # Record, list, receipts
-│   └── urls.py         # Contribution URLs
-├── utils/              # Utilities
-│   ├── whatsapp.py     # WhatsApp API integration
-│   ├── pdf_generator.py # PDF receipt generator
-│   └── permissions.py  # Custom permissions
-└── church/             # Project settings
-    ├── settings.py     # Django settings
-    └── urls.py         # Main URLs
+├── accounts/                 # User authentication
+│   ├── models.py             # Custom User model
+│   ├── serializers.py        # User serializers
+│   ├── views.py              # Auth views (register, login, profile)
+│   └── urls.py               # Auth URLs
+├── members/                  # Member management
+│   ├── models.py             # MemberProfile model
+│   ├── serializers.py        # Member serializers
+│   ├── views.py              # Member views
+│   └── urls.py               # Member URLs
+├── attendance/               # Attendance tracking
+│   ├── models.py             # ServiceType, Service, Attendance
+│   ├── serializers.py        # Attendance serializers
+│   ├── views.py              # Check-in, stats, reports
+│   └── urls.py               # Attendance URLs
+├── events/                   # Event management
+│   ├── models.py             # Event, EventRSVP
+│   ├── serializers.py        # Event serializers
+│   ├── views.py              # Event CRUD, RSVP
+│   └── urls.py               # Event URLs
+├── prayers/                  # Prayer wall
+│   ├── models.py             # PrayerRequest, PrayerRecord
+│   ├── serializers.py        # Prayer serializers
+│   ├── views.py              # Submit, pray, list prayers
+│   └── urls.py               # Prayer URLs
+├── sermons/                  # Sermon library
+│   ├── models.py             # SermonSeries, Sermon
+│   ├── serializers.py        # Sermon serializers
+│   ├── views.py              # Upload, list, listen
+│   └── urls.py               # Sermon URLs
+├── contributions/            # Contributions management
+│   ├── models.py             # ContributionType, Contribution
+│   ├── serializers.py        # Contribution serializers
+│   ├── views.py              # Record, list, receipts
+│   └── urls.py               # Contribution URLs
+├── utils/                    # Utilities
+│   ├── whatsapp.py           # WhatsApp API integration
+│   ├── pdf_generator.py      # PDF receipt generator
+│   └── permissions.py        # Custom permissions
+└── church/                   # Project settings
+    ├── settings.py           # Django settings
+    └── urls.py               # Main URLs
 
 church-frontend/
 ├── src/
 │   ├── api/
-│   │   └── client.js   # Axios configuration
+│   │   └── client.js         # Axios configuration
 │   ├── components/
 │   │   ├── Layout/
 │   │   │   ├── Sidebar.jsx
@@ -173,17 +173,17 @@ church-frontend/
 │   │   ├── ProfilePage.jsx
 │   │   └── AdminDashboardPage.jsx
 │   ├── styles/
-│   │   └── theme.js    # Color theme
-│   ├── App.jsx         # Main app with routing
-│   └── main.jsx        # Entry point
-└── package.json        # Dependencies  
+│   │   └── theme.js          # Color theme
+│   ├── App.jsx               # Main app with routing
+│   └── main.jsx              # Entry point
+└── package.json              # Dependencies
 
 Installation Guide
 Prerequisites
 
-    Python 3.12+
+    Python 3.12 or higher
 
-    Node.js 18+
+    Node.js 18 or higher
 
     pip
 
@@ -197,13 +197,16 @@ git clone https://github.com/yourusername/musdaa-management.git
 cd musdaa-management/backend
 
 Step 2: Create Virtual Environment
+
+Windows:
 bash
 
-# Windows
 python -m venv venv
 venv\Scripts\activate
 
-# Mac/Linux
+Mac/Linux:
+bash
+
 python3 -m venv venv
 source venv/bin/activate
 
@@ -301,7 +304,6 @@ Method	Endpoint	Description
 GET	/api/contributions/	List contributions
 POST	/api/contributions/	Record contribution (admin)
 GET	/api/contributions/receipt/{id}/	Download PDF receipt
-
 Testing Credentials
 Role	Username	Password
 Admin	admin	admin123
@@ -312,7 +314,6 @@ Admin	Full access to everything
 Pastor	Can manage events, prayers, sermons
 Member	Can check in, RSVP, submit prayers
 Visitor	Limited access (public view only)
- 
 Mobile Responsive
 
 The frontend is fully responsive and works on:
@@ -341,17 +342,17 @@ Contributing
 
     Fork the repository
 
-    Create a feature branch (git checkout -b feature/amazing-feature)
+    Create a feature branch: git checkout -b feature/amazing-feature
 
-    Commit your changes (git commit -m 'Add some amazing feature')
+    Commit your changes: git commit -m 'Add some amazing feature'
 
-    Push to the branch (git push origin feature/amazing-feature)
+    Push to the branch: git push origin feature/amazing-feature
 
     Open a Pull Request
 
 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 Support
 
 For support, email: menhyajoshua@gmail.com
@@ -361,14 +362,13 @@ Acknowledgments
 
     All contributors and testers
 
-Quick Start (One Command)
+Quick Start
+
+Clone and setup everything:
 bash
 
-# Clone and setup everything
 git clone https://github.com/yourusername/musdaa-management.git
 cd musdaa-management
-./setup.sh  # Or setup.bat for Windows
+./setup.sh    # Or setup.bat for Windows
 
 Made with love for MUSDAA
-text
-
